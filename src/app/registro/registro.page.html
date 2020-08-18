@@ -1,9 +1,79 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>registro</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content color="primary" [fullscreen]="true">
 
-<ion-content>
+  <div class="ion-text-center ">
+    <img src="assets/ETEC.png" alt="ETEC">
+  </div>
+
+  <ion-item class="ion-text-center ion-button-light">
+    <ion-label>
+      NOVO USUÁRIO
+    </ion-label>
+  </ion-item>
+
+  <ion-item-divider color="primary">
+    <ion-label>
+     Digite seus dados
+    </ion-label>
+  </ion-item-divider>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Nome</ion-label>
+    <ion-input type="text" placeholder="Digite seu nome"></ion-input>
+  </ion-item>
+
+
+  <ion-item lines="none">
+    <ion-label position="stacked">CPF</ion-label>
+    <ion-input type="email" placeholder="Digite seu CPF"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Data de Nascimento</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" placeholder="Selecionar" cancelText="Cancelar" doneText="ok"></ion-datetime>
+  </ion-item>
+
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Gênero</ion-label>
+
+    <ion-select placeholder="Select One">
+      <ion-select-option value="f">Feminino</ion-select-option>
+      <ion-select-option value="m">Masculino</ion-select-option>
+      <ion-select-option value="O">Outro</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Celular</ion-label>
+    <ion-input type="email" placeholder="Digite seu número"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input type="email" placeholder="Digite seu email"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Senha</ion-label>
+    <ion-input type="email" placeholder="Escolha Sua Senha"></ion-input>
+  </ion-item>
+
+  
+  <ion-item lines="none">
+    <ion-label position="stacked">Confirme</ion-label>
+    <ion-input type="email" placeholder="Confirme a sua senha"></ion-input>
+  </ion-item>
+
+  <ion-item buttom class="ion-button-light ion-text-center">
+    <ion-label>Salvar</ion-label>
+  </ion-item>
+
+  <ion-button expand="full" fill="clear" color="light">
+    Voltar
+  </ion-button>
+
+  
+
+  
 
 </ion-content>

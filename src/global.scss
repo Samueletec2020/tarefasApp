@@ -31,3 +31,9 @@
 .line-bottom{
     border-bottom: 1px solid #808080;
 }
+.ion-button-light{
+    --background: #fff;
+    --color: var(--ion-color-primary) !important;
+    font-weight: bold;;
+    margin-top: 5px;
+}
