@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';
-
+import{ Router} from '@angular/router';
+import { HomePage } from '../home/home.page';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -13,7 +14,7 @@ export class LoginPage implements OnInit {
   public mensagens_validacao ={
     email:[
       {tipo : 'required', mensagem: 'O campo E-mail é obrigatório'},
-      {tipo:'email',mensagem:'E-mail inválido'}
+      {tipo:'email', mensagem:'E-mail inválido'}
 
     ],
     senha: [
@@ -23,7 +24,7 @@ export class LoginPage implements OnInit {
     ]
   };
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.formLogin=formBuilder.group({
       email: ['',Validators.compose([Validators.required, Validators.email])],
       senha: ['',Validators.compose([Validators.required, Validators.minLength(6)])],
@@ -37,6 +38,7 @@ export class LoginPage implements OnInit {
   public login(){
     if(this.formLogin.valid){
      console.log('formulário válido') 
+     this.router.navigateByUrl('/home');
     }else{
 console.log('Formulário inválido')
     }
