@@ -19,15 +19,21 @@ export class LoginPage implements OnInit {
     ],
     senha: [
       {tipo: 'required',mensagem: 'O campo senha é obrigatório'},
-      {tipo: 'minLength', mensagem : 'A senha dever pelo menos 6 caracteres!'}
+      {tipo: 'minlength', mensagem : 'A senha dever pelo menos 6 caracteres!'}
 
     ]
+
+  
   };
+
+
+
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.formLogin=formBuilder.group({
       email: ['',Validators.compose([Validators.required, Validators.email])],
       senha: ['',Validators.compose([Validators.required, Validators.minLength(6)])],
+      
 
     })
 
