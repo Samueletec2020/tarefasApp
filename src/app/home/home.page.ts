@@ -18,7 +18,7 @@ export class HomePage {
       async ionViewWillEnter() {
         const usuarioLogado = await this.usuarioService.buscarUsuarioLogado();
         if (!usuarioLogado) {
-          this.router.navigateByUrl('/login');
+        
         
         
         }
@@ -40,7 +40,7 @@ export class HomePage {
               handler: () => {
                 this.usuarioService.removerUsuarioLogado();
                 this.router.navigateByUrl('/login');
-              }
+              } 
             }
           ]
         });

@@ -7,4 +7,5 @@ export class Usuario{
     email: string;
     senha: string;
     manterLogado: boolean;
+  toISOString: any;
 }
